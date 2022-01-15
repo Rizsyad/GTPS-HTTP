@@ -28,6 +28,8 @@ $ npm run start
 
 ## Testing DDOS
 
+first run the project **Read: How To Use** then you can run testing ddos
+
 ```
 $ yarn run ddos
 ```
