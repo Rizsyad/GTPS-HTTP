@@ -1,5 +1,16 @@
 {
+  "name": "gtps-http",
+  "version": "0.0.1",
+  "description": "GTPS HTTP ANTI DDOS",
+  "main": "index.js",
+  "repository": "https://github.com/Rizsyad/GTPS-HTTP.git",
+  "author": "rizsyad <rizsyad@gmail.com>",
   "license": "MIT",
+  "keywords": [
+    "gtps",
+    "http",
+    "anti ddos"
+  ],
   "scripts": {
     "start": "node index.js",
     "ddos": "node ddos.js",

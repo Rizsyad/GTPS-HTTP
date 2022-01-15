@@ -14,8 +14,6 @@
 
 ## How To Use
 
-- run
-
 ```
 $ yarn install
 $ yarn run start
@@ -24,17 +22,41 @@ $ yarn run start
 or
 
 ```
-npm install
-npm run start
+$ npm install
+$ npm run start
+```
+
+## Testing DDOS
+
+```
+$ yarn run ddos
+```
+
+or
+
+```
+$ npm run ddos
+```
+
+## Convert to exe
+
+```
+$ yarn run buildy
+```
+
+or
+
+```
+$ npm run buildn
 ```
 
 ## Change Log
 
 - v0.0.1
-  - Added DDOS Protected
-  - Added Convert to single file and minify
-  - Added Convert to exe
-  - Added testing DDos Attack
+  - Added DDOS Protection
+  - Added convert to single file and minify
+  - Added convert to exe
+  - Added testing DDOS attack
 
 ## License
 
