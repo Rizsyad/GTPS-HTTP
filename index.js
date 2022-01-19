@@ -4,9 +4,11 @@ const robots = require("express-robots-txt");
 const bodyParser = require("body-parser");
 const prompt = require("prompt-sync")({ sigint: true });
 const setTitle = require("console-title");
+const timeout = require("connect-timeout");
 const { success, text } = require("./lib/console");
-const rateLimiterMiddleware = require("./lib/rate-limiter");
 const { sendLog } = require("./lib/helper");
+const rateLimiterMiddleware = require("./lib/rate-limiter");
+const haltOnTimedout = require("./lib/timeout");
 
 const app = express();
 
@@ -43,6 +45,7 @@ RTENDMARKERBS1001
 `;
 
 // middleware for handle all http
+app.use(timeout("5s"));
 app.use(rateLimiterMiddleware);
 app.use(helmet());
 app.use(
@@ -52,6 +55,7 @@ app.use(
   })
 );
 app.use(bodyParser.urlencoded({ extended: true }));
+app.use(haltOnTimedout);
 
 app.post("/growtopia/server_data.php", (req, res) => {
   sendLog(req, res, false);
